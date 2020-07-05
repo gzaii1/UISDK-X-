@@ -1,4 +1,5 @@
 {
+  "homepage": "./",
   "name": "yaml_generator",
   "version": "0.1.0",
   "private": true,
@@ -6,6 +7,8 @@
     "@ant-design/colors": "^4.0.1",
     "@ant-design/icons": "^4.2.1",
     "@babel/core": "7.9.0",
+    "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",

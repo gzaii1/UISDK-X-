@@ -3,60 +3,114 @@
     padding: 0;
     width: 100vw;
     height: 100vh;
-    display: flex;
-    .LeftMenu{
-        color:#505050!important;
-        height: 100%;
-        width:16rem;
-        border-right: 1px solid #EAEAEA;
-        box-sizing: border-box;
-        box-shadow: 1px 0 4px 0 rgba(0, 0, 0, 0.2);
-        .ant-menu-submenu-title{
-            color:#505050;
-            &:hover{
-                color:#505050!important;
-            }
-        }
-        .ant-menu-item-active{
-            color:#505050;
-            &:hover{
-                color:#505050;
-            }
-        }
-        .ant-menu-item-selected{
-            background-color: #EAEAEA!important;
-            color:#505050;
-            &:after{
-                border-right:3px solid #808080;
-            }
-        }
-        ul{
-            width: 100%!important;
-            border: 0;
-        }
-        li{
-            border-top: 1px solid #EAEAEA;
-            border-left:1px solid #EAEAEA;
-        }
-    }
+    overflow: hidden;
     .TabsList{
-        width:100%;
-        height:100%;
+        width:calc(100vw - 16rem);
+        height:100vh;
+        overflow: auto;
         .ant-tabs-nav-wrap{
             .ant-tabs-tab:nth-child(1){
-                margin-left: 4rem;
+                // margin-left: 4rem;
             }
             .ant-tabs-tab{
                 // border: 1px solid red;
+                
+                // &::after{
+                //     display: block;
+                //     content: '';
+                //     position: absolute;
+                //     border-top-left-radius: 3px;
+                //     border-top-right-radius: 3px;
+                //     top:0;
+                //     left: -4px;
+                //     width: 140%;
+                //     height: 140%;
+                //     border-left: 1px solid #505050;
+                //     border-top: 3px solid #505050;
+                // }
+                // &::before{
+                //     display: block;
+                //     content: '';
+                //     position: absolute;
+                //     border-top-left-radius: 3px;
+                //     border-top-right-radius: 3px;
+                //     top:0;
+                //     left: 1px;
+                //     width: 140%;
+                //     height: 140%;
+                //     border-right: 1px solid #505050;
+                //     transform: rotate(-7deg);
+                // }
             }
         }
     }
 
-    .content{
+    .tab{
         width: 100%;
-        height: 100%;
-        overflow: hidden;
-        // display: flex;
-        padding: 0 2rem;
+        height:100%;
+        padding:4% 0;
+        .tab_content{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            padding: 0 4rem;
+            .tab_content_iptarea{
+                display:flex;
+                /* current tab */
+                .tab_content_select{
+                    // max-width: 8rem;
+                }
+
+                .ant-form-item{
+                    width: auto;
+                    .ant-select{
+                        width:90%;
+                    }
+                }
+                .ant-form-item:nth-child(1){
+                    width: 15%;
+                }
+                .ant-form-item:nth-child(2){
+                    width: 15%;
+                }
+                .ant-form-item:nth-child(3){
+                    justify-content: right;
+                    margin-left: 24%;
+                    margin-right:6%;
+                    width: 40%;
+                    display: flex;
+                    justify-content: right;
+                }
+
+                /* history tab */
+                .tab_content_delete_btn{
+                    width:100%;
+                    margin:1rem 0 2rem 0;
+                    display: block;
+                    .ant-btn-dangerous{
+                        float: right;
+                    }
+                }
+            }
+            .tab_content_upload{
+                display: flex;
+                margin-top: 1.5rem;
+                margin-bottom: 3rem;
+                max-width: 70%;
+                min-width:30rem;
+            }
+            .tab_content_table{
+    
+            }
+            .tab_content_generator_btn{
+                display: flex;
+                justify-content: flex-end;
+                margin:2rem 0 0 0;
+                .ant-btn{
+                    margin-right:10%;
+                }
+            }
+        }
     }
+    
 }
